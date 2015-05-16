@@ -1,0 +1,586 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <meta charset="UTF-8">
+        <title>InstaBikeApp</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    		<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<!-- Optional theme -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- Latest compiled and minified JavaScript -->
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "InstaBikeApp",
+   "APP_ID": "InstaBikeApp",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "1923165143",
+   "WORKLIGHT_PLATFORM_VERSION": "6.3.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/InstaBikeApp\/android\/"
+};
+</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<!-- Optional theme -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="jqueryMobile/jquery.mobile-1.4.5.css" rel="stylesheet">
+        <link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+        <link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
+        <link href="jqueryMobile/jquery.mobile.theme-1.4.5.css" rel="stylesheet">
+        <link href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" rel="stylesheet" type="text/css"> 
+        <link href="css/main.css" rel="stylesheet">
+        <script>window.$ = window.jQuery = WLJQ;</script>
+    		<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+    		<script src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.js" type="text/javascript"></script>
+    </head>
+    <body style="display: none;">
+        <div data-role="content" style="padding: 15px">
+    				<!--application UI goes here-->
+            <div class="pageStyle" data-control-title="Home" data-role="page" id="Home">
+                <div class="panel-heading" data-position="fixed" data-role="header" data-theme="a">
+                    <h5>
+            InstaBike
+        </h5>
+                </div>
+                <div data-role="content" style="padding: 12px">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="img1" data-controltype="image" style=" text-align:center">
+                        <img src="https://s3.amazonaws.com/assets.codiqa.com/BjXbVWJyR22HsqU2vGUR_1422457121876.png" style="width: 300px; height: 200px">
+        </div>
+                    <br>
+                    <br>
+                    <a class="InstaBikeButton " data-role="button" data-theme="b" data-transition="flip" href="#GetStarted">
+            Get Started
+        </a>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="Homenavbar">
+                        <ul>
+                            <li>
+                                <a href="#HowItWorks" id="item" style="background-color:lavender">How it works</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pageStyle" data-control-title="HowItWorks" data-role="page" id="HowItWorks">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="collapsible-set" id="collapsible-set">
+                    <div data-role="collapsible" id="collapsible">
+                        <h5>Find a Ride</h5>
+                        <div data-role="content" id="pageContent">Use Borrow a Bike to find bikes near you.</div>
+                    </div>
+                    <div data-role="collapsible" id="collapsible0">
+                        <h5>Contact the Lister</h5>
+                        <div data-role="content" id="pageContent">Check Contact information in bike details and Request the date &amp; time you need the ride. Message the owner with any questions.</div>
+                    </div>
+                    <div data-role="collapsible" id="collapsible1">
+                        <h5>Book it and Ride</h5>
+                        <div data-role="content" id="pageContent">Confirm with the owner and pick up your ride.</div>
+                    </div>
+                </div> 
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="HowItWorksnavbar">
+                        <ul>
+                            <li>
+                                <a href="#Home" id="item0" style="background-color:lavender">Home</a>
+                            </li>
+                            <li>
+                                <a href="#FAQ" id="item1" style="background-color:lavender">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#Contact" id="item2" style="background-color:lavender">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>		
+            </div>
+            <div class="pageStyle" data-control-title="FAQ" data-role="page" id="FAQ">
+                <div class="panel-heading" data-position="fixed" data-role="header" data-theme="a">
+                    <h5>
+            InstaBike
+        </h5>
+                </div>
+                <div data-role="content" style="padding: 12px">
+                    <b> Need Help? Try these FAQ </b>
+                    <br>
+                    <div data-role="collapsible-set" id="collapsible-set">
+                        <div data-role="collapsible" id="collapsible">
+                            <h5>What if ride is stolen?</h5>
+                            <div data-role="content" id="pageContent">If a ride is stolen, the renter should attempt to get a police report.</div>
+                        </div>
+                        <div data-role="collapsible" id="collapsible0">
+                            <h5>What if ride is damaged?</h5>
+                            <div data-role="content" id="pageContent">Any damage occurring during a rental window is the sole responsibility of the renter.</div>
+                        </div>
+                        <div data-role="collapsible" id="collapsible1">
+                            <h5>What if someone is hurt?</h5>
+                            <div data-role="content" id="pageContent">In the rental agreement, all renters take responsibility for checking the bike for safety before taking it from the lister. </div>
+                        </div>
+                        <div data-role="collapsible" id="collapsible1">
+                            <h5>How do i exceed the rental?</h5>
+                            <div data-role="content" id="pageContent">If you are enjoying your rental and would like to keep the bike for a longer time period, you can request a new drop off date. </div>
+                        </div>
+                    </div> 
+                    <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                        <div data-role="navbar" id="FAQnavbar">
+                            <ul>
+                                <li>
+                                    <a href="#Home" id="item0" style="background-color:lavender">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#HowItWorks" id="item1" style="background-color:lavender">Help</a>
+                                </li>
+                                <li>
+                                    <a href="#Contact" id="item2" style="background-color:lavender">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>      
+            </div>
+            <div class="pageStyle" data-control-title="Contact" data-role="page" id="Contact">
+                <div class="panel-heading " data-position="fixed" data-role="header" data-theme="a">
+                    <h5>
+            InstaBike
+        </h5>
+                </div>
+    Email us: manasisharma@ufl.edu
+              prachim89@ufl.edu
+	<div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="Contactnavbar">
+                        <ul>
+                            <li>
+                                <a href="#Home" id="item0" style="background-color:lavender">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>  
+            <div class="pageStyle" data-control-title="GetStarted" data-role="page" id="GetStarted">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="content">
+                    <div>
+                        <input class="form-control input-lg" id="textinput5" name="" placeholder="Username" type="text" value="">
+            <input class="form-control input-lg" id="textinput6" name="" placeholder="Password" type="password" value="">
+                        <br>
+                    </div> 
+                    <a class="InstaBikeButton" data-role="button" onclick="authenticate();">
+            Sign In
+        </a> 
+        <!-- <a data-role="button" class="InstaBikeButton " data-transition="flip" data-theme="b" onclick="authenticate();">
+            Sign In
+        </a> -->
+                    <div align="center">
+                        <a data-transition="fade" href="#SignUp"><span style="color:black"> No account?</span>
+               Sign up for InstaBike 
+            </a>
+                    </div>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="GetStartednavbar">
+                        <ul>
+                            <li>
+                                <a href="#Home" id="item0" style="background-color:lavender">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="LogIn" data-role="page" id="LogIn">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="content">
+                    <div data-controltype="textblock">
+                        <p style="text-align: center;">
+                            <span style="color: rgb(0, 0, 255);">
+                    <strong>
+                        Welcome to InstaBike
+                    </strong>
+                </span>
+                        </p>
+                        <p style="text-align: center;">
+                            <span style="color: rgb(0, 0, 255);">
+                    <strong>
+                        Choose an action and get started
+                    </strong>
+                </span>
+                        </p>
+                    </div>
+                    <br>
+                    <a class="InstaBikeButton" data-role="button" href="#RentHome">
+            Lend Your Bike
+        </a>
+                    <br>
+                    <a class="InstaBikeButton" data-role="button" href="#BorrowHome">
+            Borrow a Bike
+        </a>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="LogInnavbar">
+                        <ul>
+                            <li>
+                                <a href="#GetStarted" id="item2" style="background-color:lavender">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="SignUp" data-role="page" id="SignUp">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="content">
+                    <div data-controltype="textblock">
+                        <p style="text-align: center;">
+                            <strong>
+                    <span data-mce-style="color: #3366ff;" style="color: blue;">
+                        Come Join the InstaBike community! Lets Set up your account.
+                    </span>
+                </strong>
+                        </p>
+                    </div>
+                    <div>
+                        <input class="form-control input-lg" id="textinput10" name="" placeholder="Name" type="text" value="">
+        <input class="form-control input-lg" id="textinput11" name="" placeholder="Phone Number" type="text" value="">
+        <input class="form-control input-lg" id="textinput8" name="" placeholder="Email" type="text" value="">
+            <input class="form-control input-lg" id="textinput7" name="" placeholder="Username" type="text" value="">
+            <input class="form-control input-lg" id="textinput9" name="" placeholder="Pasword" type="password" value="">
+                        <br>
+                    </div>
+                    <div data-controltype="textblock">
+                        <p style="text-align: center;">
+                By Submitting this form, an account will be created for you
+            </p>
+                    </div>
+                    <a class="InstaBikeButton" data-role="button" onclick="SignUp();">
+            Join InstaBike
+        </a>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="SignUpnavbar">
+                        <ul>
+                            <li>
+                                <a href="#GetStarted" style="float:left;background-color:lavender">Back</a>
+                            </li>
+                            <li>
+                                <a href="#Home" style="background-color:lavender">Home</a>
+                            </li>
+                            <li>
+                                <a href="#Contact" style="float:right;background-color:lavender">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="RentHome" data-role="page" id="RentHome">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="content">
+        <!-- <div data-role="navbar" data-iconpos="top"> -->
+                    <ul data-inset="true" data-role="listview" style="background-color:transparent">
+                        <li>
+                            <a data-icon="" data-theme="" data-transition="fade" href="#AddBike" style="background-color:transparent">
+                        Add a Bike
+                    </a>
+                        </li>
+                        <li>
+                            <a data-icon="" data-theme="" data-transition="fade" href="#ManageListings" style="background-color:transparent">
+                        Manage Listings
+                    </a>
+                        </li>
+                    </ul>
+       <!--  </div> -->
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="RentHomenavbar">
+                        <ul>
+                            <li>
+                                <a href="#LogIn" id="item0" style="float:left;background-color:lavender">Back</a>
+                            </li>
+                            <li>
+                                <a href="#LogIn" id="item1" style="background-color:lavender">My Home</a>
+                            </li>
+                            <li>
+                                <a href="#GetStarted" id="item2" style="float:right;background-color:lavender">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="BorrowHome" data-role="page" id="BorrowHome">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            Instabike
+        </h3>
+                </div>
+                <div data-role="content">
+        <!-- <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#Filters" data-transition="fade" data-theme="" data-icon="">
+                        Filter
+                    </a>
+                </li>
+                <li>
+                    <a href="#SortType" data-transition="fade" data-theme="" data-icon="">
+                        Sort By
+                    </a>
+                </li>
+            </ul>
+        </div> -->
+                    <ul data-divider-theme="b" data-inset="true" data-role="listview" id="bikeList">
+                    </ul>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="BorrowHomenavbar">
+                        <ul>
+                            <li>
+                                <a href="#LogIn" id="item0" style="float:left;background-color:lavender">Back</a>
+                            </li>
+                            <li>
+                                <a href="#LogIn" id="item1" style="background-color:lavender">My Home</a>
+                            </li>
+                            <li>
+                                <a href="#GetStarted" id="item2" style="float:right;background-color:lavender">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="AddBike" data-role="page" id="AddBike">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            Header
+        </h3>
+                </div>
+                <div data-role="content">
+                    <div data-iconpos="top" data-role="navbar">
+                        <ul>
+                            <li>
+                                <a data-icon="" data-theme="" data-transition="fade" href="#AddBike">
+                        Add Bike
+                    </a>
+                            </li>
+                            <li>
+                                <a data-icon="" data-theme="" data-transition="fade" href="#ManageListings">
+                        Manage Listings
+                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-controltype="textarea" data-role="fieldcontain">
+                        <label for="textarea2">
+                Add Title for listing
+            </label>
+            <textarea id="titleText" name="" placeholder="Bike available in XX block"></textarea>
+                    </div>
+                    <div data-controltype="radiobuttons" data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="vertical" id="abc">
+                            <legend>
+                    Select Bike Type:
+                </legend>
+                <input id="radio5" name="biketype" type="radio" value="Mountain">
+                <label for="radio5">
+                    Mountain
+                </label>
+                <input id="radio6" name="biketype" type="radio" value=" Road">
+                <label for="radio6">
+                    Road
+                </label>
+                <input id="radio7" name="biketype" type="radio" value=" BMX">
+                <label for="radio7">
+                    BMX
+                </label>
+                        </fieldset>
+                    </div>
+                    <div data-controltype="textarea" data-role="fieldcontain">
+                        <label for="textarea2">
+                Add Description
+            </label>
+            <textarea id="textarea2" name="" placeholder=""></textarea>
+                    </div>
+                    <div data-controltype="fileinput" data-role="fieldcontain">
+                        <label for="fileinput2">
+                Upload Image
+            </label>
+            <input accept="*png, *jpeg, *gif" id="fileinput2" name="" type="file">
+                    </div>
+                    <div data-controltype="dateinput" data-role="fieldcontain">
+                        <label for="dateinput4">
+                Availability Date
+            </label>
+            <input id="dateinput4" name="" placeholder="" type="date" value="">
+                    </div>
+                    <div data-controltype="checkboxes" data-role="fieldcontain" id="checkboxes2">
+                        <fieldset data-role="controlgroup" data-type="vertical">
+                            <legend>
+                    Add Accessories
+                </legend>
+                <input id="checkbox5" name="accessories" type="checkbox" value="Helmet">
+                <label for="checkbox5">
+                    Helmet
+                </label>
+                <input id="checkbox6" name="accessories" type="checkbox" value="Light">
+                <label for="checkbox6">
+                    Light
+                </label>
+                <input id="checkbox7" name="accessories" type="checkbox" value="Lock">
+                <label for="checkbox7">
+                    Lock
+                </label>
+                <input id="checkbox8" name="accessories" type="checkbox" value="Rack">
+                <label for="checkbox8">
+                    Rack
+                </label>
+                        </fieldset>
+                    </div>
+                    <a class="InstaBikeButton" data-role="button" href="#RentHome" onclick="submitAddBike()">
+            Submit
+        </a>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="AddBikenavbar">
+                        <ul>
+                            <li>
+                                <a href="#RentHome" id="item0" style="float:left;background-color:lavender">Back</a>
+                            </li>
+                            <li>
+                                <a href="#LogIn" id="item1" style="background-color:lavender">My Home</a>
+                            </li>
+                            <li>
+                                <a href="#GetStarted" id="item2" style="float:right;background-color:lavender">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="ManageListings" data-role="page" id="ManageListings">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <p style="text-align: center;">
+                    <span style="color: rgb(0, 0, 255);">
+                    <strong>
+                        Click on the bike you wish to remove. 
+                    </strong>
+                </span>
+                </p>
+                <ul data-divider-theme="b" data-inset="true" data-role="listview" id="LenderbikeList">
+                </ul>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="ManageListingsnavbar">
+                        <ul>
+                            <li>
+                                <a href="#RentHome" id="item0" style="float:left;background-color:lavender">Back</a>
+                            </li>
+                            <li>
+                                <a href="#LogIn" id="item1" style="background-color:lavender">My Home</a>
+                            </li>
+                            <li>
+                                <a href="#GetStarted" id="item2" style="float:right;background-color:lavender">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+            <div class="pageStyle" data-control-title="Filters" data-role="page" id="Filters">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="content">
+                    <a data-role="button" href="#BorrowHome">
+            Apply
+        </a>
+                </div>
+            </div>
+            <div class="pageStyle" data-control-title="SortType" data-role="page" id="SortType">
+                <div class="panel-heading" data-role="header" data-theme="a">
+                    <h3>
+            InstaBike
+        </h3>
+                </div>
+                <div data-role="content">
+                    <a data-role="button" href="#BorrowHome">
+            Apply
+        </a>
+                </div>
+            </div>  
+            <div class="pageStyle" data-control-title="BikeDetails" data-role="page" id="BikeDetails">
+                <div class="panel-heading" data-role="header" data-theme="a">
+        <!-- <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a>   -->                      
+                    <h3>
+           InstaBike
+        </h3>
+                </div>        
+                <div data-role="content">
+                    <ul data-role="listview" data-theme="a" id="bikeInfoDetails">
+                    </ul>
+                </div>
+                <div data-role="content">
+                    <div data-controltype="image" style="">
+                        <img src="https://s3.amazonaws.com/assets.codiqa.com/DSuty5uSunmxagwpWSQS_bikeImg.jpg" style="width: 288px; height: 200px">
+        </div>
+                </div>
+                <div class="panel-footer" data-position="fixed" data-role="footer" id="footer">
+                    <div data-role="navbar" id="BikeDetailsnavbar">
+                        <ul>
+                            <li>
+                                <a href="#BorrowHome" id="item0" style="float:left;background-color:lavender">Back</a>
+                            </li>
+                            <li>
+                                <a href="#LogIn" id="item1" style="background-color:lavender">My Home</a>
+                            </li>
+                            <li>
+                                <a href="#GetStarted" id="item2" style="float:right;background-color:lavender">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>  
+        </div>
+        <script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+    </body>
+</html>

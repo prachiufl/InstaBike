@@ -1,0 +1,56 @@
+
+/* Stylesheet content from css/main.css in folder common */
+
+body .pageStyle{
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #91B5DF),
+	color-stop(0.8, #D2FFB0)
+)!important; 
+background-image: -o-linear-gradient(bottom, #91B5DF 0%, #D2FFB0 80%) !important;
+background-image: -moz-linear-gradient(bottom, #91B5DF 0%, #D2FFB0 80%) !important;
+background-image: -webkit-linear-gradient(bottom, #91B5DF 0%, #D2FFB0 80%) !important;
+background-image: -ms-linear-gradient(bottom, #91B5DF 0%, #D2FFB0 80%) !important;
+background-image: linear-gradient(to bottom, #91B5DF 0%, #D2FFB0 80%) !important;
+}
+.panel-heading{
+	background-color: powderblue;
+}
+.panel-footer{
+	background-color: powderblue !important;
+}
+ .InstaBikeButton:hover {
+  background: #005580;
+}
+ .InstaBikeButton {
+   font-family: initial !important;	
+   background-color:blue !important;
+   color:white !important;
+   border-radius:5px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align:center;
+ background-image: linear-gradient(#34495E 50%, #2C3E50 50%);
+}
+
+.ui-footer{
+	align:center !important;
+}
+#HowItWorksnavbar{
+	text-align: center;
+}
+
+ul{
+	list-style: none;
+  background-color: transparent;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+} 
+
+/* Stylesheet content from css/main.css in folder android */
+
+/* this CSS file extends the application CSS file found under common\css */
+
